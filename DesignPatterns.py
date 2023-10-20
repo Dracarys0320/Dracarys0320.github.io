@@ -28,7 +28,7 @@ class Adapter(Client):
         return self.adaptee.resquest_trans()
     
 #Ejemplo de implementación del adapter
-pdf_reader = Client()
+pdata_reader = Client()
 word_reader =Adaptee()
 
 print(Adapter(word_reader).resquest)

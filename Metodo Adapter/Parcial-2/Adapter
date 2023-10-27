@@ -1,0 +1,36 @@
+
+class ReproductorAudio:
+    def reproducir(self, archivo):
+        pass
+
+class AudioWav:
+    def reproducir(self):
+        print("Reproduciendo formato .wav")
+
+class AudioMp3:
+    def reproducir(self):
+        print("Reproduciendo formato.mp3")
+
+class AdaptadorWav(ReproductorAudio):
+    def __init__(self, archivo):
+        self.archivo = archivo
+
+    def reproducir(self):
+        return self.archivo.reproducir()
+
+class AdaptadorMp3(ReproductorAudio):
+    def __init__(self, archivo):
+        self.archivo = archivo
+
+    def reproducir(self):
+        return self.archivo.reproducir()
+
+archivo_wav = AudioWav()
+archivo_mp3 = AudioMp3()
+
+reproductor = AdaptadorWav(archivo_wav)
+reproductor.reproducir()
+
+reproductor = AdaptadorMp3(archivo_mp3)
+reproductor.reproducir()
+

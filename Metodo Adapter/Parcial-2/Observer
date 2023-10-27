@@ -1,0 +1,31 @@
+class Observer:
+    def actualizar(self, evento):
+        pass
+
+class ServicioAlertasMeteorologicas:
+    def __init__(self):
+        self.observers = []
+
+    def suscribir(self, Observer):
+        self.observers.append(Observer)
+
+    def notificar(self, evento):
+        for observer in self.observers:
+            observer.actualizar(evento)
+
+class AlertaTemperaturaBaja(Observer):
+    def actualizar(self, evento):
+        if evento.tipo == "temperatura_baja":
+            print("¡OJO! La temperatura bajo a {} grados".format(evento.valor))
+
+class AlertaMeteorologica:  
+    def __init__(self, tipo, valor):
+        self.tipo = tipo
+        self.valor = valor
+
+servicio = ServicioAlertasMeteorologicas()
+
+alerta_temperatura_baja = AlertaTemperaturaBaja()
+servicio.suscribir(alerta_temperatura_baja)
+
+servicio.notificar(AlertaMeteorologica(tipo="temperatura_baja", valor=10))

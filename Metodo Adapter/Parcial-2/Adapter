@@ -1,8 +1,9 @@
-
+# Aqui se define la clase base para el reproductor de audio
 class ReproductorAudio:
     def reproducir(self, archivo):
         pass
 
+# Clase para representar los formatos .wav y .mp3
 class AudioWav:
     def reproducir(self):
         print("Reproduciendo formato .wav")
@@ -11,6 +12,7 @@ class AudioMp3:
     def reproducir(self):
         print("Reproduciendo formato.mp3")
 
+# Adaptador para reproducir los archivos .wav y .mp3
 class AdaptadorWav(ReproductorAudio):
     def __init__(self, archivo):
         self.archivo = archivo
@@ -25,9 +27,11 @@ class AdaptadorMp3(ReproductorAudio):
     def reproducir(self):
         return self.archivo.reproducir()
 
+# Se crea una instancias de archivos de audio para los formatos
 archivo_wav = AudioWav()
 archivo_mp3 = AudioMp3()
 
+#  Se crean los reproductores de audio adaptado para los formatos
 reproductor = AdaptadorWav(archivo_wav)
 reproductor.reproducir()
 

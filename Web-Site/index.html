@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lenguajes de Programación</title>
+<style>
+body {
+  background-image: url("fondo4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.logo {
+  float: left;
+  width: 20%;
+}
+
+#titulo {
+  color: rgb(148, 0, 211); /* Cambia el color del texto a morado */
+}
+
+#presentacion {
+  font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+  font-weight: bold; /* Coloca el texto en negrita */
+}
+
+.enlace-rojo {
+  color: rgb(255, 0, 0); /* Cambia el color del enlace a rojo */
+}
+
+#pantalla-inicial {
+  text-align: center;
+  margin-top: 20%;
+}
+
+#boton-inicio {
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20%; /* Hace que el botón sea ovalado */
+  background-color: rgb(252, 253, 253); /* Cambia el color de fondo del botón */
+  color: rgb(10, 10, 10); /* Cambia el color del texto del botón */
+  border: none; /* Quita el borde del botón */
+}
+
+#pagina-principal {
+  display: none;
+}
+
+</style>
+</head>
+<body>
+
+<div id="pantalla-inicial">
+  <h1>Bienvenido</h1>
+  <p>¡INGRESE BAJO SU PROPIO RIESGO!</p>
+  <button id="boton-inicio" onclick="mostrarPaginaPrincipal()">Ingresar</button>
+</div>
+
+<div id="pagina-principal">
+
+  <img src="Logousc.png" alt="Logo USC" class="logo">
+
+  <h1 id="titulo">Lenguajes de Programación</h1>
+  <h2>Jannina Castellanos</h2>
+
+  <button onclick="mostrarCorte1()">Corte 1</button>
+  <button onclick="mostrarCorte2()">Corte 2</button>
+  <button onclick="mostrarCorte3()">Corte 3</button>
+
+  <div id="presentacion">
+    <h3>Presentación Personal</h3>
+    <p>¡Hola! Soy Jannina Castellanos. Disfruto explorando diferentes lenguajes y tecnologías. ¡Bienvenido a mi página!</p>
+  </div>
+
+  <script>
+    // Variables para controlar el estado de la información mostrada
+    var conclusionCorte1Mostrada = false;
+    var conclusionCorte2Mostrada = false;
+    var conclusionCorte3Mostrada = false;
+
+    function mostrarCorte1() {
+      // Verificar si la conclusión del Corte 1 está mostrada
+      if (conclusionCorte1Mostrada) {
+        // Restablecer el contenido normal del Corte 1
+        conclusionCorte1Mostrada = false;
+        document.getElementById("presentacion").innerHTML = "<h3>Presentación Personal</h3><p>¡Hola! Soy Jannina Castellanos. Disfruto explorando diferentes lenguajes y tecnologías. ¡Bienvenido a mi página!</p>";
+      } else {
+        // Mostrar el contenido del Corte 1
+        document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el primer corte, se exploraron los principios de programación funcional en Python, cubriendo conceptos clave como funciones lambda, mapas, filtros, reducción y recursividad. Este enfoque resalta las ventajas fundamentales de la programación funcional, como la concisión y legibilidad del código, facilidad en las pruebas y rendimiento mejorado. Además, se vio el Modelo Vista Controlador (MVC) como un patrón de diseño que separa la lógica de la aplicación, la presentación y la interacción del usuario para mejorar la estructura y mantenimiento del software.</p><p><a href='https://github.com/user/repo/tree/main/folder1' target='_blank' class='enlace-rojo'>Ver código</a></p>";
+
+        // Agregar botones internos para el mapa mental y la conclusión del Corte 1
+        document.getElementById("presentacion").innerHTML += "<button onclick='mostrarMapaMental()'>Mapa Mental</button>";
+        document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte1()'>Conclusión Específica</button>";
+      }
+    }
+
+    function mostrarCorte2() {
+      // Mostrar el contenido del Corte 2
+      document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el segundo corte aprendimos sobre los patrones de diseño los cuales son soluciones probadas y optimizadas para problemas recurrentes en el diseño de software. Sirven como guías para resolver ciertos problemas de manera efectiva y eficiente, proporcionando un enfoque estructurado y estandarizado. Estos patrones encapsulan las mejores prácticas de diseño, facilitando la creación de software más robusto, flexible y mantenible.</p><p><a href='https://github.com/Dracarys0320/Dracarys0320.github.io/tree/main/Metodo%20Adapter' target='_blank' class='enlace-rojo'>Ver código</a></p>";
+
+      // Agregar botón interno para la conclusión del Corte 2
+      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte2()'>Conclusión Específica</button>";
+    }
+
+    function mostrarCorte3() {
+      // Mostrar el contenido del Corte 3
+      document.getElementById("presentacion").innerHTML = "<h3>Conclusión del Corte 3</h3><p>Aquí va la conclusión del Corte 3.</p><p><a href='https://github.com/user/repo/tree/main/folder3' target='_blank' class='enlace-rojo'>Ver código</a></p>";
+
+      // Agregar botón interno para la conclusión del Corte 3
+      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte3()'>Conclusión Específica</button>";
+    }
+
+    function mostrarMapaMental() {
+      // Crear un elemento de imagen
+      var imagenMapaMental = document.createElement("img");
+      
+      // Establecer la fuente de la imagen (reemplaza 'url_del_mapa_mental.png' con la URL de tu imagen)
+      imagenMapaMental.src = 'Mapa Mental Python.jpg';
+
+      // Ajustar el tamaño si es necesario
+      imagenMapaMental.style.width = "100%";
+      
+      // Agregar la imagen al documento
+      document.getElementById("presentacion").appendChild(imagenMapaMental);
+
+      // Actualizar el estado del mapa mental
+      conclusionCorte1Mostrada = false;
+    }
+
+    function mostrarConclucionCorte1() {
+      // Verificar si la conclusión del Corte 1 ya está mostrada
+      if (!conclusionCorte1Mostrada) {
+        // Agregar texto adicional a la conclusión del Corte 1
+        var textoAdicional = "<h3>Conclusión Específica</h3><p>En resumen, el curso nos mostró una visión detallada de la programación funcional en el contexto de Python. Pone especial énfasis en la importancia de emplear funciones puras, evitar efectos secundarios y trabajar con datos inmutables. Al seguir estos principios, los desarrolladores pueden escribir código que resulte más comprensible, sencillo de evaluar y mantener en el tiempo. Además, la guía resalta los beneficios adicionales de la programación funcional, como un rendimiento mejorado, mayor modularidad y la capacidad de aprovechar el paralelismo. En conjunto, este recurso se presenta como una herramienta valiosa para aquellos que deseen aprender acerca de la programación funcional en Python.</p>";
+        document.getElementById("presentacion").innerHTML = textoAdicional;
+
+        // Actualizar el estado de la conclusión del Corte 1
+        conclusionCorte1Mostrada = true;
+      }
+    }
+
+    function mostrarConclucionCorte2() {
+      // Verificar si la conclusión del Corte 2 ya está mostrada
+      if (!conclusionCorte2Mostrada) {
+        // Agregar texto adicional a la conclusión del Corte 2
+        var textoAdicional = "<h3>Conclusión Específica</h3><p>En este segundo corte, exploramos a fondo los patrones de diseño, descubriendo su impacto significativo en el desarrollo de software. Aprendimos a identificar y aplicar patrones comunes como Singleton, Factory, Observer, entre otros. Estos patrones proporcionan soluciones elegantes a desafíos específicos, mejorando la legibilidad del código y promoviendo la escalabilidad del sistema. Al comprender y emplear patrones de diseño de manera efectiva, estamos capacitados para construir sistemas más flexibles y adaptables a medida que avanzamos en nuestra travesía en el mundo del desarrollo de software.</p>";
+        document.getElementById("presentacion").innerHTML = textoAdicional;
+
+        // Actualizar el estado de la conclusión del Corte 2
+        conclusionCorte2Mostrada = true;
+      }
+    }
+
+    function mostrarConclucionCorte3() {
+      // Verificar si la conclusión del Corte 3 ya está mostrada
+      if (!conclusionCorte3Mostrada) {
+        // Agregar texto adicional a la conclusión del Corte 3
+        var textoAdicional = "<h3>Conclusión Específica</h3><p>Aquí va la conclusión del Corte 3.</p>";
+        document.getElementById("presentacion").innerHTML = textoAdicional;
+
+        // Actualizar el estado de la conclusión del Corte 3
+        conclusionCorte3Mostrada = true;
+      }
+    }
+
+    function mostrarPaginaPrincipal() {
+      // Ocultar la pantalla inicial y mostrar la página principal
+      document.getElementById("pantalla-inicial").style.display = "none";
+      document.getElementById("pagina-principal").style.display = "block";
+    }
+
+  </script>
+
+</div>
+
+</body>
+</html>

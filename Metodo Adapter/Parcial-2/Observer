@@ -1,31 +1,43 @@
+
+# Aqui se define la clase Observer para el contrato de actualización
 class Observer:
     def actualizar(self, evento):
         pass
 
+# Aqui se define la clase ServicioAlertasMeteorologicas que administra 
+# los observers y notifica eventos
 class ServicioAlertasMeteorologicas:
     def __init__(self):
         self.observers = []
 
+# Método para suscribir el observer al servicio de alertas
     def suscribir(self, Observer):
         self.observers.append(Observer)
 
+# Método para notificar a todos los observers sobre un evento específico
     def notificar(self, evento):
         for observer in self.observers:
             observer.actualizar(evento)
 
+# Aqui se define la clase AlertaTemperaturaBaja que hereda de Observer 
+# y define la lógica de actualización para los eventos de temperatura baja
 class AlertaTemperaturaBaja(Observer):
     def actualizar(self, evento):
         if evento.tipo == "temperatura_baja":
             print("¡OJO! La temperatura bajo a {} grados".format(evento.valor))
 
+# Aqui se define la clase AlertaMeteorologica que representa 
+# un evento meteorológico
 class AlertaMeteorologica:  
     def __init__(self, tipo, valor):
         self.tipo = tipo
         self.valor = valor
 
+# Se crea una instancia de ServicioAlertasMeteorologicas y suscripción de un observer
 servicio = ServicioAlertasMeteorologicas()
-
 alerta_temperatura_baja = AlertaTemperaturaBaja()
 servicio.suscribir(alerta_temperatura_baja)
 
+ #Aqui se realiza la notificación de un evento de temperatura 
+ # baja al servicio de alertas
 servicio.notificar(AlertaMeteorologica(tipo="temperatura_baja", valor=10))

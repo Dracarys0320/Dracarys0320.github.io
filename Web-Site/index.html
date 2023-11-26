@@ -87,11 +87,11 @@ body {
         document.getElementById("presentacion").innerHTML = "<h3>Presentación Personal</h3><p>¡Hola! Soy Jannina Castellanos. Disfruto explorando diferentes lenguajes y tecnologías. ¡Bienvenido a mi página!</p>";
       } else {
         // Mostrar el contenido del Corte 1
-        document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el primer corte, se exploraron los principios de programación funcional en Python, cubriendo conceptos clave como funciones lambda, mapas, filtros, reducción y recursividad. Este enfoque resalta las ventajas fundamentales de la programación funcional, como la concisión y legibilidad del código, facilidad en las pruebas y rendimiento mejorado. Además, se vio el Modelo Vista Controlador (MVC) como un patrón de diseño que separa la lógica de la aplicación, la presentación y la interacción del usuario para mejorar la estructura y mantenimiento del software.</p><p><a href='https://github.com/user/repo/tree/main/folder1' target='_blank' class='enlace-rojo'>Ver código</a></p>";
+        document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el primer corte, se exploraron los principios de programación funcional en Python, cubriendo conceptos clave como funciones lambda, mapas, filtros, reducción y recursividad. Este enfoque resalta las ventajas fundamentales de la programación funcional, como la concisión y legibilidad del código, facilidad en las pruebas y rendimiento mejorado. Además, se vio el Modelo Vista Controlador (MVC) que separa la lógica de la aplicación, la presentación y la interacción del usuario para mejorar la estructura y mantenimiento del software.</p><p><a href='https://github.com/user/repo/tree/main/folder1' target='_blank' class='enlace-rojo'>Ver código</a></p>";
 
         // Agregar botones internos para el mapa mental y la conclusión del Corte 1
         document.getElementById("presentacion").innerHTML += "<button onclick='mostrarMapaMental()'>Mapa Mental</button>";
-        document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte1()'>Conclusión Específica</button>";
+        document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte1()'>Conclusión del Corte</button>";
       }
     }
 
@@ -100,15 +100,15 @@ body {
       document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el segundo corte aprendimos sobre los patrones de diseño los cuales son soluciones probadas y optimizadas para problemas recurrentes en el diseño de software. Sirven como guías para resolver ciertos problemas de manera efectiva y eficiente, proporcionando un enfoque estructurado y estandarizado. Estos patrones encapsulan las mejores prácticas de diseño, facilitando la creación de software más robusto, flexible y mantenible.</p><p><a href='https://github.com/Dracarys0320/Dracarys0320.github.io/tree/main/Metodo%20Adapter' target='_blank' class='enlace-rojo'>Ver código</a></p>";
 
       // Agregar botón interno para la conclusión del Corte 2
-      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte2()'>Conclusión Específica</button>";
+      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte2()'>Conclusión del Corte</button>";
     }
 
     function mostrarCorte3() {
       // Mostrar el contenido del Corte 3
-      document.getElementById("presentacion").innerHTML = "<h3>Conclusión del Corte 3</h3><p>Aquí va la conclusión del Corte 3.</p><p><a href='https://github.com/user/repo/tree/main/folder3' target='_blank' class='enlace-rojo'>Ver código</a></p>";
+      document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el tercer corte aprendimos sobre la sincronización de hilos en Java el cual es un concepto esencial para garantizar la ejecución ordenada y prevenir condiciones de carrera en entornos concurrentes, Java ofrece diversas herramientas para lograr la sincronización, como bloques sincronizados y métodos sincronizados. El uso de la palabra clave synchronized ayuda a controlar el acceso a recursos compartidos, evitando problemas de consistencia y asegurando la integridad de los datos en aplicaciones multihilo. Adicionalmente, las clases del paquete java.util.concurrent proporcionan estructuras más avanzadas, como semáforos, cerrojos y barreras, para abordar situaciones complejas de concurrencia.</p><p><a href='https://github.com/user/repo/tree/main/folder3' target='_blank' class='enlace-rojo'>Ver código</a></p>";
 
       // Agregar botón interno para la conclusión del Corte 3
-      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte3()'>Conclusión Específica</button>";
+      document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte3()'>Conclusión del Corte</button>";
     }
 
     function mostrarMapaMental() {
@@ -132,7 +132,7 @@ body {
       // Verificar si la conclusión del Corte 1 ya está mostrada
       if (!conclusionCorte1Mostrada) {
         // Agregar texto adicional a la conclusión del Corte 1
-        var textoAdicional = "<h3>Conclusión Específica</h3><p>En resumen, el curso nos mostró una visión detallada de la programación funcional en el contexto de Python. Pone especial énfasis en la importancia de emplear funciones puras, evitar efectos secundarios y trabajar con datos inmutables. Al seguir estos principios, los desarrolladores pueden escribir código que resulte más comprensible, sencillo de evaluar y mantener en el tiempo. Además, la guía resalta los beneficios adicionales de la programación funcional, como un rendimiento mejorado, mayor modularidad y la capacidad de aprovechar el paralelismo. En conjunto, este recurso se presenta como una herramienta valiosa para aquellos que deseen aprender acerca de la programación funcional en Python.</p>";
+        var textoAdicional = "<h3>Conclusión del Corte</h3><p>En este primer corte, el curso nos mostró una visión detallada de la programación funcional en el contexto de Python. Pone especial énfasis en la importancia de emplear funciones puras, evitar efectos secundarios y trabajar con datos inmutables. Al seguir estos principios, los desarrolladores pueden escribir código que resulte más comprensible, sencillo de evaluar y mantener en el tiempo. Además, la guía resalta los beneficios adicionales de la programación funcional, como un rendimiento mejorado, mayor modularidad y la capacidad de aprovechar el paralelismo. En conjunto, este recurso se presenta como una herramienta valiosa para aquellos que deseen aprender acerca de la programación funcional en Python.</p>";
         document.getElementById("presentacion").innerHTML = textoAdicional;
 
         // Actualizar el estado de la conclusión del Corte 1
@@ -144,7 +144,7 @@ body {
       // Verificar si la conclusión del Corte 2 ya está mostrada
       if (!conclusionCorte2Mostrada) {
         // Agregar texto adicional a la conclusión del Corte 2
-        var textoAdicional = "<h3>Conclusión Específica</h3><p>En este segundo corte, exploramos a fondo los patrones de diseño, descubriendo su impacto significativo en el desarrollo de software. Aprendimos a identificar y aplicar patrones comunes como Singleton, Factory, Observer, entre otros. Estos patrones proporcionan soluciones elegantes a desafíos específicos, mejorando la legibilidad del código y promoviendo la escalabilidad del sistema. Al comprender y emplear patrones de diseño de manera efectiva, estamos capacitados para construir sistemas más flexibles y adaptables a medida que avanzamos en nuestra travesía en el mundo del desarrollo de software.</p>";
+        var textoAdicional = "<h3>Conclusión del Corte</h3><p>En este segundo corte, exploramos a fondo los patrones de diseño, descubriendo su impacto significativo en el desarrollo de software. Aprendimos a identificar y aplicar patrones comunes como Singleton, Factory, Observer, entre otros. Estos patrones proporcionan soluciones elegantes a desafíos específicos, mejorando la legibilidad del código y promoviendo la escalabilidad del sistema. Al comprender y emplear patrones de diseño de manera efectiva, estamos capacitados para construir sistemas más flexibles y adaptables a medida que avanzamos en nuestra travesía en el mundo del desarrollo de software.</p>";
         document.getElementById("presentacion").innerHTML = textoAdicional;
 
         // Actualizar el estado de la conclusión del Corte 2
@@ -156,7 +156,7 @@ body {
       // Verificar si la conclusión del Corte 3 ya está mostrada
       if (!conclusionCorte3Mostrada) {
         // Agregar texto adicional a la conclusión del Corte 3
-        var textoAdicional = "<h3>Conclusión Específica</h3><p>Aquí va la conclusión del Corte 3.</p>";
+        var textoAdicional = "<h3>Conclusión del Corte</h3><p>En este tercer corte, la sincronización de hilos es crítica en el desarrollo de aplicaciones concurrentes en Java, garantiza que múltiples hilos puedan compartir recursos de manera segura y eficiente, el uso adecuado de las técnicas de sincronización es esencial para evitar problemas como condiciones de carrera y garantizar la coherencia de los datos. Java proporciona una variedad de mecanismos de sincronización que se adaptan a diferentes escenarios, desde los simples bloques sincronizados hasta las avanzadas clases del paquete java.util.concurrent. Al comprender y aplicar estos conceptos, los desarrolladores podemos construir aplicaciones robustas y eficientes en entornos de programación concurrente.</p>";
         document.getElementById("presentacion").innerHTML = textoAdicional;
 
         // Actualizar el estado de la conclusión del Corte 3

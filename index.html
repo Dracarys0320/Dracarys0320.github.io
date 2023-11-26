@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lenguajes de Programación</title>
+</head>
+<body>
+
+<h1>Lenguajes de Programación</h1>
+<h2>Jannina Castellanos</h2>
+
+<button onclick="mostrarCorte1()">Corte 1</button>
+<button onclick="mostrarCorte2()">Corte 2</button>
+<button onclick="mostrarCorte3()">Corte 3</button>
+
+<div id="presentacion">
+  <h3>Presentación Personal</h3>
+  <p>¡Hola! Soy Jannina Castellanos. Me apasiona la programación y disfruto explorando diferentes lenguajes y tecnologías. ¡Bienvenido a mi página!</p>
+</div>
+
+<div id="corte1" style="display:none;">
+  <h3>Conclusión del Corte 1</h3>
+  <p>Aquí va la conclusión del Corte 1.</p>
+</div>
+
+<div id="corte2" style="display:none;">
+  <h3>Conclusión del Corte 2</h3>
+  <p>Aquí va la conclusión del Corte 2.</p>
+</div>
+
+<div id="corte3" style="display:none;">
+  <h3>Conclusión del Corte 3</h3>
+  <p>Aquí va la conclusión del Corte 3.</p>
+</div>
+
+<script>
+function mostrarCorte1() {
+  document.getElementById("corte1").style.display = "block";
+  document.getElementById("corte2").style.display = "none";
+  document.getElementById("corte3").style.display = "none";
+}
+
+function mostrarCorte2() {
+  document.getElementById("corte1").style.display = "none";
+  document.getElementById("corte2").style.display = "block";
+  document.getElementById("corte3").style.display = "none";
+}
+
+function mostrarCorte3() {
+  document.getElementById("corte1").style.display = "none";
+  document.getElementById("corte2").style.display = "none";
+  document.getElementById("corte3").style.display = "block";
+}
+</script>
+
+</body>
+</html>

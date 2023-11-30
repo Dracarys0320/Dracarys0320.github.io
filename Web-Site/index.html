@@ -70,7 +70,7 @@ body {
 
   <div id="presentacion">
     <h3>Presentación Personal</h3>
-    <p>¡Hola! Soy Jannina Castellanos estudiante de Ingenieria de Sistemas de septimo semestre. Disfruto explorando diferentes lenguajes y tecnologías especialmente ciberseguridad. ¡Bienvenido a mi página!</p>
+    <p>¡Hola! Soy Jannina Castellanos estudiante de Ingenieria de Sistemas de séptimo semestre. Disfruto explorando diferentes lenguajes y tecnologías especialmente ciberseguridad. ¡Bienvenido a mi página!</p><p>Aquí encontrarás los temas visto durante el semestre con el profesor Diego Loaiza en la materia Lenguajes de Programación, cada corte cuenta con acceso a mi repositorio de GitHub en donde será redirigido a la unidad de cada corte. </p>
   </div>
 
   <script>
@@ -84,7 +84,7 @@ body {
       if (conclusionCorte1Mostrada) {
         // Restablecer el contenido normal del Corte 1
         conclusionCorte1Mostrada = false;
-        document.getElementById("presentacion").innerHTML = "<h3>Presentación Personal</h3><p>¡Hola! Soy Jannina Castellanos. Disfruto explorando diferentes lenguajes y tecnologías. ¡Bienvenido a mi página!</p>";
+        document.getElementById("presentacion").innerHTML = "<h3>¡Hola!</h3><p>Puedes pasar al corte 2</p>";
       } else {
         // Mostrar el contenido del Corte 1
         document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el primer corte, se exploraron los principios de programación funcional en Python, cubriendo conceptos clave como funciones lambda, mapas, filtros, reducción y recursividad. Este enfoque resalta las ventajas fundamentales de la programación funcional, como la concisión y legibilidad del código, facilidad en las pruebas y rendimiento mejorado. Además, se vio el Modelo Vista Controlador (MVC) que separa la lógica de la aplicación, la presentación y la interacción del usuario para mejorar la estructura y mantenimiento del software.</p><p><a href='https://github.com/Dracarys0320/Dracarys0320.github.io/tree/main/Unidad%201' target='_blank' class='enlace-rojo'>Ver código en GitHub</a></p>";
@@ -96,19 +96,36 @@ body {
     }
 
     function mostrarCorte2() {
+
+        // Verificar si la conclusión del Corte 2 está mostrada
+        if (conclusionCorte2Mostrada) {
+        // Restablecer el contenido normal del Corte 2
+        conclusionCorte2Mostrada = false;
+        document.getElementById("presentacion").innerHTML = "<h3>¡Hola!</h3><p> Puedes pasar al corte 3</p>";
+        } else {
       // Mostrar el contenido del Corte 2
       document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el segundo corte aprendimos sobre los patrones de diseño los cuales son soluciones probadas y optimizadas para problemas recurrentes en el diseño de software. Sirven como guías para resolver ciertos problemas de manera efectiva y eficiente, proporcionando un enfoque estructurado y estandarizado. Estos patrones encapsulan las mejores prácticas de diseño, facilitando la creación de software más robusto, flexible y mantenible.</p><p><a href='https://github.com/Dracarys0320/Dracarys0320.github.io/tree/main/Unidad%202' target='_blank' class='enlace-rojo'>Ver código en GitHub</a></p>";
 
       // Agregar botón interno para la conclusión del Corte 2
       document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte2()'>Conclusión del Corte</button>";
+      
+      }
     }
 
     function mostrarCorte3() {
+
+        // Verificar si la conclusión del Corte 2 está mostrada
+        if (conclusionCorte3Mostrada) {
+        // Restablecer el contenido normal del Corte 2
+        conclusionCorte3Mostrada = false;
+        document.getElementById("presentacion").innerHTML = "<h3></h3><p>Muchas Gracias por visitar mi página, vuelve pronto.</p>";
+        } else {
       // Mostrar el contenido del Corte 3
       document.getElementById("presentacion").innerHTML = "<h3>¿Qué aprendimos?</h3><p>En el tercer corte aprendimos sobre la sincronización de hilos en Java el cual es un concepto esencial para garantizar la ejecución ordenada y prevenir condiciones de carrera en entornos concurrentes, Java ofrece diversas herramientas para lograr la sincronización, como bloques sincronizados y métodos sincronizados. El uso de la palabra clave synchronized ayuda a controlar el acceso a recursos compartidos, evitando problemas de consistencia y asegurando la integridad de los datos en aplicaciones multihilo. Adicionalmente, las clases del paquete java.util.concurrent proporcionan estructuras más avanzadas, como semáforos, cerrojos y barreras, para abordar situaciones complejas de concurrencia.</p><p><a href='https://github.com/Dracarys0320/Dracarys0320.github.io/tree/main/Unidad%203' target='_blank' class='enlace-rojo'>Ver código en GitHub</a></p>";
 
       // Agregar botón interno para la conclusión del Corte 3
       document.getElementById("presentacion").innerHTML += "<button onclick='mostrarConclucionCorte3()'>Conclusión del Corte</button>";
+      }
     }
 
     function mostrarMapaMental() {
